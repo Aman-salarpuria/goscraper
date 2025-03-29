@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: goscraper
+    env: go
+    buildCommand: go build -o goscraper ./src
+    startCommand: ./goscraper
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: ENCRYPTION_KEY
+        sync: false
+      - key: VALIDATION_KEY
+        sync: false
